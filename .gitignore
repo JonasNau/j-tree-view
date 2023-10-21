@@ -1,0 +1,4 @@
+node_modules
+production
+#Thumbs.db is a File for Windows used for Thumbnail Creation
+Thumbs.db

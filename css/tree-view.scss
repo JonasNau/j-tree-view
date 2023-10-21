@@ -1,0 +1,130 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital@1&display=swap");
+
+body {
+	font-family: "Work Sans", "sans serif";
+	box-sizing: border-box;
+}
+
+// Define the colors
+$black-color: #000000;
+$gray-color: #808080;
+
+.tree-view-wrapper {
+	// background-color: black;
+	ul.tree-view-root {
+		background-color: whitesmoke;
+		list-style: none;
+		background-color: none;
+		padding: 2rem;
+
+		li.tree-view-item {
+			// position: relative;
+			padding-left: 0.5rem;
+			//margin-left: 1rem;
+			> .content {
+				display: flex;
+				font-size: 1.1rem;
+				padding: 0.25rem;
+				border-bottom: 1px solid black;
+				border-collapse: collapse;
+
+				&:hover {
+					background-color: rgba(173, 216, 230, 0.39);
+				}
+
+				> .select-wrapper {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					width: 20px;
+					height: 20px;
+					> input[type="checkbox"].select {
+						width: 15px;
+						height: 15px;
+						justify-self: flex-start;
+					}
+				}
+
+				> .title {
+					// padding: 0 0.5rem;
+					border-radius: 10px;
+					&:hover {
+						// sbackground-color: lightblue;
+					}
+					&:active {
+						// background-color: gray;
+					}
+				}
+
+				> .custom-html-content {
+					flex-grow: 1;
+				}
+
+				// > .toggle-button-wrapper {
+				// 	display: none;
+				// }
+
+				& > .toggle-button-wrapper {
+					display: flex;
+					button.btn-expand-toggle {
+						width: 20px;
+						height: 20px;
+						> .content {
+							justify-self: flex-start;
+							position: relative;
+							background-image: url("../media/images/triangle.svg");
+							background-repeat: no-repeat;
+							background-size: 100%;
+							transform: rotate(90deg);
+							width: 100%;
+							height: 50%;
+							transition: transform 0.25s ease;
+						}
+						background: none;
+						border: none;
+						&:hover {
+							background-color: lightblue;
+						}
+					}
+				}
+			}
+
+			margin-left: 0;
+			> .tree-view-wrapper {
+				display: none;
+			}
+
+			&.expanded {
+				> .tree-view-wrapper {
+					border-left: 2px solid rgba(0, 0, 0, 0.4);
+					display: block;
+				}
+				> .content {
+					> .toggle-button-wrapper {
+						button.btn-expand-toggle {
+							> .content {
+								transform: rotate(180deg);
+							}
+						}
+					}
+				}
+			}
+
+			> .tree-view-wrapper > ul.tree-view {
+				list-style: none;
+			}
+		}
+	}
+}
+
+//Utility classes
+.hidden {
+	display: none !important;
+}
