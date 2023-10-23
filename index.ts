@@ -1,3 +1,3 @@
-import * as JRandomFunctions from "./ts/j-random-functions";
-export { JRandomFunctions as default };
-export * from "./ts/j-random-functions";
+import * as JTreeView from "./ts/TreeView";
+export { JTreeView as default };
+export * from "./ts/TreeView";
