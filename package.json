@@ -1,6 +1,6 @@
 {
   "name": "j-tree-view",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "his package includes a class which can handle drawing and updating tree views in typescript to generate html.",
   "module": "index.ts",
   "main": "index.ts",
@@ -13,7 +13,7 @@
   "author": "Jonas Naumann",
   "license": "ISC",
   "dependencies": {
-    "j-memoryhelper-functions": "^1.0.0",
+    "j-memoryhelper-functions": "^1.0.2",
     "j-object-functions": "^1.0.2"
   }
 }
